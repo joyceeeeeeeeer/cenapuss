@@ -1,9 +1,21 @@
+function contactApiUrl() {
+  var sc = document.currentScript;
+  if (sc && sc.src) {
+    try {
+      var u = new URL(sc.src);
+      u.pathname = u.pathname.replace(/[^/]*$/, "");
+      return new URL("api/contact", u).pathname;
+    } catch (e) {}
+  }
+  return "/api/contact";
+}
+
 async function submitInquiry(form, statusEl, lang) {
   const data = Object.fromEntries(new FormData(form).entries());
   data.lang = lang;
   statusEl.textContent = lang === "zh" ? "提交中..." : lang === "it" ? "Invio in corso..." : "Submitting...";
   try {
-    const res = await fetch("/api/contact", {
+    const res = await fetch(contactApiUrl(), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)

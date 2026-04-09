@@ -3,15 +3,30 @@
   var path = window.location.pathname || "/index.html";
   var cleanPath = path === "/" ? "/index.html" : path;
 
+  if (window.location.hostname.indexOf("github.io") !== -1) {
+    var segs = cleanPath.split("/").filter(Boolean);
+    if (segs.length) segs.shift();
+    cleanPath = "/" + segs.join("/");
+    if (cleanPath === "/" || cleanPath === "") cleanPath = "/index.html";
+  }
+
   function langFromPath(p) {
-    if (p.indexOf("/zh/") === 0) return "zh";
-    if (p.indexOf("/it/") === 0) return "it";
+    if (p.indexOf("/zh/") !== -1) return "zh";
+    if (p.indexOf("/it/") !== -1) return "it";
     return "en";
   }
 
   function basePath(p) {
-    if (p.indexOf("/zh/") === 0) return p.replace("/zh/", "/");
-    if (p.indexOf("/it/") === 0) return p.replace("/it/", "/");
+    var zi = p.indexOf("/zh/");
+    if (zi !== -1) {
+      var zt = p.slice(zi + 4);
+      return "/" + (zt || "index.html");
+    }
+    var ii = p.indexOf("/it/");
+    if (ii !== -1) {
+      var itt = p.slice(ii + 4);
+      return "/" + (itt || "index.html");
+    }
     return p;
   }
 

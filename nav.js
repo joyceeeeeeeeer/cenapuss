@@ -1,21 +1,43 @@
 (function () {
+  var SITE_ROOT = "/";
+  (function resolveSiteRoot() {
+    var sc = document.currentScript;
+    if (sc && sc.src) {
+      try {
+        var pathname = new URL(sc.src).pathname;
+        SITE_ROOT = pathname.replace(/nav\.js$/i, "").replace(/\/?$/, "/");
+      } catch (e) {}
+    }
+  })();
+
   function localeFromPath(pathname) {
-    if (pathname.indexOf("/zh/") === 0) return "zh";
-    if (pathname.indexOf("/it/") === 0) return "it";
+    if (pathname.indexOf("/zh/") !== -1) return "zh";
+    if (pathname.indexOf("/it/") !== -1) return "it";
     return "en";
   }
 
   function stripLocalePrefix(pathname) {
-    if (pathname.indexOf("/zh/") === 0) return pathname.slice(3);
-    if (pathname.indexOf("/it/") === 0) return pathname.slice(3);
+    var zh = "/zh/";
+    var zi = pathname.indexOf(zh);
+    if (zi !== -1) return pathname.slice(zi + zh.length) || "index.html";
+    var it = "/it/";
+    var ii = pathname.indexOf(it);
+    if (ii !== -1) return pathname.slice(ii + it.length) || "index.html";
+    var root = SITE_ROOT;
+    if (root !== "/" && pathname.indexOf(root) === 0) {
+      var tail = pathname.slice(root.length);
+      return tail || "index.html";
+    }
+    if (pathname === "/" || pathname === "") return "index.html";
     return pathname.startsWith("/") ? pathname.slice(1) : pathname;
   }
 
   function hrefForLocale(rest, locale) {
     var r = rest || "index.html";
     if (!r || r === "/") r = "index.html";
-    if (locale === "en") return "/" + r;
-    return "/" + locale + "/" + r;
+    if (r.startsWith("/")) r = r.slice(1);
+    if (locale === "en") return SITE_ROOT + r;
+    return SITE_ROOT + locale + "/" + r;
   }
 
   var path = window.location.pathname || "/index.html";
@@ -87,7 +109,7 @@
     { href: pageHref("contact.html"), key: "contact" }
   ];
 
-  var homeHref = loc === "en" ? "/index.html" : "/" + loc + "/index.html";
+  var homeHref = hrefForLocale("index.html", loc);
 
   var header = document.createElement("header");
   header.className = "site-header";
@@ -139,9 +161,14 @@
     el.textContent = String(new Date().getFullYear());
   });
 
-  if (!document.querySelector('script[src="/ui.js"]')) {
+  var uiPath = SITE_ROOT.replace(/\/?$/, "/") + "ui.js";
+  var already = false;
+  document.querySelectorAll("script[src]").forEach(function (s) {
+    if ((s.getAttribute("src") || "").indexOf("ui.js") !== -1) already = true;
+  });
+  if (!already) {
     var ui = document.createElement("script");
-    ui.src = "/ui.js";
+    ui.src = uiPath;
     ui.defer = true;
     document.body.appendChild(ui);
   }

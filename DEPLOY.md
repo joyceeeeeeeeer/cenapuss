@@ -40,7 +40,7 @@ This site is static and ready to deploy to Vercel, Netlify, GitHub Pages, or Ngi
 ### Option C: GitHub Pages
 
 1. Push folder content to repository root (or `docs` branch).
-2. **Preview at `https://USER.github.io/REPO/`:** do **not** commit a root `CNAME` file and leave **Custom domain** empty in **Settings → Pages**. A `CNAME` file (or that setting) tells GitHub to bind `cenapus.com` and **redirect** `github.io` traffic to the custom domain.
+2. **Preview at `https://USER.github.io/REPO/`:** do **not** commit a root `CNAME` file and leave **Custom domain** empty in **Settings → Pages**. A `CNAME` file (or that setting) tells GitHub to bind `cenapus.com` and **redirect** `github.io` traffic to the custom domain. HTML uses **document-relative** `href` / `src` (not root-absolute `/file.css`) so CSS and JS load under the `/REPO/` prefix; `nav.js` derives the same prefix from its own URL.
 3. **Production on `cenapus.com` via GitHub Pages only:** add a `CNAME` file containing `cenapus.com` and configure DNS per GitHub Pages docs. (If production is on Vercel instead, use Vercel for DNS/domain; you still skip `CNAME` in the repo when you want `github.io` to stay a separate preview URL.)
 
 ## 4) Search engine submission
