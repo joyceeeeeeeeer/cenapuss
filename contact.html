@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Cenapus</title>
+    <meta name="description" content="Contact Cenapus for smart retail freezer quotes and solution planning." />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/seo.js"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <p class="section-label">Inquiry</p>
+          <h1>Get a solution proposal</h1>
+          <p class="sub">
+            Include country, scenario, expected quantity, timeline, and integration needs. Submissions are routed to our
+            team (and can forward to Feishu when the server endpoint is configured).
+          </p>
+          <div class="grid-2">
+            <article class="card">
+              <h2>Contact</h2>
+              <p><strong>Company:</strong> Qingdao Cenapus Technology Co., Ltd.</p>
+              <p><strong>Email:</strong> cenapus@163.com</p>
+              <p><strong>Phone:</strong> +86 18701281257</p>
+              <p><strong>Address:</strong> No.3, Changshengri Electric Yard, Daxin Street, Jimo District, Qingdao, Shandong, China</p>
+            </article>
+            <article class="card">
+              <h2>Inquiry form</h2>
+              <form data-inquiry-form data-lang="en">
+                <label>Name</label>
+                <input name="name" required />
+                <label>Email</label>
+                <input name="email" type="email" required />
+                <label>Country / Region</label>
+                <input name="country" required />
+                <label>Inquiry type</label>
+                <select name="type" required>
+                  <option value="Distributor">Distributor</option>
+                  <option value="End Client">End Client</option>
+                  <option value="Integrator">Integrator</option>
+                  <option value="OEM/ODM Project">OEM/ODM Project</option>
+                </select>
+                <label>Project details</label>
+                <textarea name="message" placeholder="Scenario, quantity, timeline, integration requirements..." required></textarea>
+                <button class="btn btn-primary" type="submit">Submit</button>
+                <div class="status" aria-live="polite"></div>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/contact.js"></script>
+    <script defer src="/nav.js"></script>
+  </body>
+</html>

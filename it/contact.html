@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contatto | Cenapus</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/seo.js"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <h1>Contattaci</h1>
+          <div class="grid-2">
+            <article class="card">
+              <p><strong>Email:</strong> cenapus@163.com</p>
+              <p><strong>Telefono:</strong> +86 18701281257</p>
+              <p><strong>Indirizzo:</strong> No.3, Changshengri Electric Yard, Daxin Street, Jimo District, Qingdao, Shandong, China</p>
+            </article>
+            <article class="card">
+              <form data-inquiry-form data-lang="it">
+                <label>Nome</label><input name="name" required />
+                <label>Email</label><input name="email" type="email" required />
+                <label>Paese/Regione</label><input name="country" required />
+                <label>Tipo richiesta</label>
+                <select name="type" required>
+                  <option value="Distributore">Distributore</option>
+                  <option value="Cliente finale">Cliente finale</option>
+                  <option value="Integratore">Integratore</option>
+                  <option value="Progetto OEM/ODM">Progetto OEM/ODM</option>
+                </select>
+                <label>Dettagli progetto</label>
+                <textarea name="message" placeholder="Scenario, quantita, tempistica, requisiti di integrazione..." required></textarea>
+                <button class="btn btn-primary" type="submit">Invia richiesta</button>
+                <div class="status" aria-live="polite"></div>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/contact.js"></script>
+    <script defer src="/nav.js"></script>
+  </body>
+</html>

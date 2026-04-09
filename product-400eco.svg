@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <rect width="1200" height="820" fill="#0c1930"/>
+  <rect x="470" y="130" width="260" height="570" rx="16" fill="#151f33" stroke="#6aaeff" stroke-width="3"/>
+  <rect x="496" y="194" width="208" height="430" rx="8" fill="#0f1d34"/>
+  <rect x="496" y="150" width="208" height="30" rx="5" fill="#2b4d82"/>
+  <text x="80" y="130" fill="#e6f2ff" font-size="52" font-family="Arial, sans-serif">400ECO</text>
+  <text x="80" y="190" fill="#b8cfee" font-size="30" font-family="Arial, sans-serif">Cost-Optimized Entry Choice</text>
+</svg>

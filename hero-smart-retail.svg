@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="880" viewBox="0 0 1400 880">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c213f"/>
+      <stop offset="100%" stop-color="#102b52"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="880" fill="url(#g1)"/>
+  <rect x="100" y="120" width="400" height="640" rx="16" fill="#1d3258" stroke="#5da9ff" stroke-width="3"/>
+  <rect x="140" y="180" width="320" height="440" rx="8" fill="#0f1f3b"/>
+  <rect x="560" y="160" width="730" height="160" rx="14" fill="#183766"/>
+  <rect x="560" y="360" width="330" height="380" rx="14" fill="#183766"/>
+  <rect x="960" y="360" width="330" height="380" rx="14" fill="#183766"/>
+  <text x="580" y="245" fill="#e7f1ff" font-size="46" font-family="Arial, sans-serif">Smart Retail Deployment</text>
+  <text x="580" y="430" fill="#bcd5f7" font-size="28" font-family="Arial, sans-serif">Unmanned " Connected " Data-Driven</text>
+</svg>

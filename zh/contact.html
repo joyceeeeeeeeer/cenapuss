@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>联系我们 | Cenapus</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/seo.js"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <h1>联系我们</h1>
+          <div class="grid-2">
+            <article class="card">
+              <p><strong>邮箱：</strong>cenapus@163.com</p>
+              <p><strong>电话：</strong>18701281257</p>
+              <p><strong>地址：</strong>山东省青岛市即墨区大信街道昌盛日电院内3号</p>
+            </article>
+            <article class="card">
+              <form data-inquiry-form data-lang="zh">
+                <label>联系人</label><input name="name" required />
+                <label>邮箱</label><input name="email" type="email" required />
+                <label>国家/地区</label><input name="country" required />
+                <label>咨询类型</label>
+                <select name="type" required>
+                  <option value="经销商">经销商</option>
+                  <option value="终端客户">终端客户</option>
+                  <option value="集成商">集成商</option>
+                  <option value="OEM/ODM项目">OEM/ODM项目</option>
+                </select>
+                <label>需求说明</label>
+                <textarea name="message" placeholder="场景、数量、交期、对接需求..." required></textarea>
+                <button class="btn btn-primary" type="submit">提交咨询</button>
+                <div class="status" aria-live="polite"></div>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/contact.js"></script>
+    <script defer src="/nav.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <rect width="1200" height="820" fill="#0d1a31"/>
+  <rect x="420" y="100" width="360" height="620" rx="18" fill="#1c2d4b" stroke="#75b6ff" stroke-width="3"/>
+  <rect x="458" y="170" width="284" height="470" rx="8" fill="#0f1d35"/>
+  <rect x="458" y="120" width="284" height="36" rx="6" fill="#2b4d82"/>
+  <text x="80" y="130" fill="#e6f2ff" font-size="52" font-family="Arial, sans-serif">600PLUS</text>
+  <text x="80" y="190" fill="#b8cfee" font-size="30" font-family="Arial, sans-serif">Large Capacity Single-Door Flagship</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <rect width="1200" height="820" fill="#0b1730"/>
+  <rect x="360" y="120" width="480" height="590" rx="18" fill="#172845" stroke="#6fb7ff" stroke-width="3"/>
+  <rect x="392" y="195" width="416" height="445" rx="8" fill="#0f1e38"/>
+  <rect x="392" y="145" width="416" height="34" rx="6" fill="#2f548a"/>
+  <text x="80" y="130" fill="#e6f2ff" font-size="52" font-family="Arial, sans-serif">1200MAX</text>
+  <text x="80" y="190" fill="#b8cfee" font-size="30" font-family="Arial, sans-serif">Transport Hub Essential</text>
+</svg>

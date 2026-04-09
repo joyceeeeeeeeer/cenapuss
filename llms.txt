@@ -1,0 +1,15 @@
+# Cenapus Website AI Access Notes
+
+This website provides product and solution information for commercial freezers and smart retail systems.
+
+Preferred starting pages:
+- /index.html
+- /solutions.html
+- /products.html
+- /faq.html
+- /developers.html
+
+Key entities:
+- Company: Qingdao Cenapus Technology Co., Ltd.
+- Core products: 600PLUS, 500FIT, 400ECO, 1200MAX
+- Certifications: CCC, ISO9001, ISO14001

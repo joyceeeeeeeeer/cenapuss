@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#13274a"/>
+      <stop offset="100%" stop-color="#0b1730"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="820" fill="url(#g2)"/>
+  <rect x="70" y="90" width="1260" height="640" rx="14" fill="#1a2f54" stroke="#4f89d8" stroke-width="2"/>
+  <rect x="120" y="160" width="180" height="500" rx="8" fill="#243f6d"/>
+  <rect x="340" y="160" width="180" height="500" rx="8" fill="#243f6d"/>
+  <rect x="560" y="160" width="180" height="500" rx="8" fill="#243f6d"/>
+  <rect x="780" y="160" width="180" height="500" rx="8" fill="#243f6d"/>
+  <rect x="1000" y="160" width="280" height="500" rx="8" fill="#243f6d"/>
+  <text x="120" y="140" fill="#dcebff" font-size="34" font-family="Arial, sans-serif">Manufacturing Line Overview</text>
+  <text x="120" y="705" fill="#bad2f3" font-size="24" font-family="Arial, sans-serif">Sheet Metal " Foaming " Assembly " QA Inspection</text>
+</svg>
